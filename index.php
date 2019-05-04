@@ -148,7 +148,8 @@
 </style>
 </head>
 	
- <body>
+<body>
+<div class="container">  
 <form action="index.php" method="post" enctype="multipart/form-data">
     <h3>Formulir Calon Anggota UKM Seni UNM</h3>
     <h4><p>Silahkan isi formulir di bawah ini, kemudian klik <strong>Submit</strong> untuk daftar.</p></h4>
@@ -169,6 +170,7 @@
       <input type="submit" name="load_data" value="LIHAT YANG TELAH MENDAFTAR" />
     </fieldset>
   </form>
+  </div>
 
  <?php
     $host = "thiosqldatabase.database.windows.net";
