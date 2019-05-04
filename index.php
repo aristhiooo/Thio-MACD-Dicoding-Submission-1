@@ -4,8 +4,8 @@
  <style type="text/css">
  	body { background-color: #FF4500; border-top: solid 10px #000;
  	    color: #333; font-size: .85em; margin: 20; padding: 20;
- 	    font-family: "Segoe UI", Verdana, Helvetica, Sans-Serif;
- 	}
+ 	    font-family: "Segoe UI", Verdana, Helvetica, Sans-Serif;}
+	 
  	h1, h2, h3,{ color: #000; margin-bottom: 0; padding-bottom: 0; }
  	h1 { font-size: 2em; }
  	h2 { font-size: 1.75em; }
@@ -15,6 +15,7 @@
  	td { padding: 0.25em 2em 0.25em 0em; border: 0 none; }
  </style>
  </head>
+	
  <body>
  <h1>Formulir Calon Anggota UKM Seni UNM</h1>
  <p>Silahkan isi formulir di bawah ini, kemudian klik <strong>Submit</strong> untuk daftar.</p>
@@ -22,10 +23,11 @@
        Nama Lengkap  <input type="text" name="nama" id="nama"/></br></br>
        NIM <input type="text" name="nim" id="nim"/></br></br>
        Program Studi <input type="text" name="prodi" id="prodi"/></br></br>
-	   No. HP <input type="text" name="hp" id="hp"/></br></br>
+       No. HP <input type="text" name="hp" id="hp"/></br></br>
        <input type="submit" name="submit" value="DAFTAR" />
        <input type="submit" name="load_data" value="LIHAT YANG TELAH MENDAFTAR" />
  </form>
+
  <?php
     $host = "thiosqldatabase.database.windows.net";
     $user = "aristhiooo";
@@ -36,8 +38,7 @@
         $conn = new PDO("sqlsrv:server = $host; Database = $db", $user, $pass);
         $conn->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
     } catch(Exception $e) {
-        echo "Failed: " . $e;
-    }
+        echo "Failed: " . $e;}
 
     if (isset($_POST['submit'])) {
         try {
@@ -46,7 +47,7 @@
             $prodi = $_POST['prodi'];
 	    $hp = $_POST['hp'];
             $date = date("Y-m-d");
-            // Insert data
+            // Tulis data ke database
             $sql_insert = "INSERT INTO Daftar (nama, nim, prodi, hp, date) 
                         VALUES (?,?,?,?,?)";
             $stmt = $conn->prepare($sql_insert);
@@ -72,13 +73,13 @@
                 echo "<tr><th>Nama Lengkap</th>";
                 echo "<th>NIM</th>";
                 echo "<th>Program Studi</th>";
-				echo "<th>No. HP</th>";
+		echo "<th>No. HP</th>";
                 echo "<th>Tanggal daftar</th></tr>";
                 foreach($registrants as $registrant) {
                     echo "<tr><td>".$registrant['nama']."</td>";
                     echo "<td>".$registrant['nim']."</td>";
                     echo "<td>".$registrant['prodi']."</td>";
-					echo "<td>".$registrant['hp']."</td>";
+		    echo "<td>".$registrant['hp']."</td>";
                     echo "<td>".$registrant['date']."</td></tr>";
                 }
                 echo "</table>";
