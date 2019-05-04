@@ -44,17 +44,17 @@
             $nama = $_POST['nama'];
             $nim = $_POST['nim'];
             $prodi = $_POST['prodi'];
-			$hp = $_POST['hp'];
+	    $hp = $_POST['hp'];
             $date = date("Y-m-d");
             // Insert data
             $sql_insert = "INSERT INTO Daftar (nama, nim, prodi, hp, date) 
-                        VALUES (?,?,?,?)";
+                        VALUES (?,?,?,?,?)";
             $stmt = $conn->prepare($sql_insert);
             $stmt->bindValue(1, $nama);
             $stmt->bindValue(2, $nim);
             $stmt->bindValue(3, $prodi);
             $stmt->bindValue(4, $hp);
-			$stmt->bindValue(5, $date);
+	    $stmt->bindValue(5, $date);
             $stmt->execute();
         } catch(Exception $e) {
             echo "Failed: " . $e;
