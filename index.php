@@ -2,7 +2,7 @@
  <head>
  <Title>Formulir Calon Anggota UKM Seni UNM</Title>
  <style type="text/css">
- 	body { background-color: #fff; border-top: solid 10px #000;
+ 	body { background-color: #FF4500; border-top: solid 10px #000;
  	    color: #333; font-size: .85em; margin: 20; padding: 20;
  	    font-family: "Segoe UI", Verdana, Helvetica, Sans-Serif;
  	}
@@ -23,8 +23,8 @@
        NIM <input type="text" name="nim" id="nim"/></br></br>
        Program Studi <input type="text" name="prodi" id="prodi"/></br></br>
 	   No. HP <input type="text" name="hp" id="hp"/></br></br>
-       <input type="submit" name="submit" value="Submit" />
-       <input type="submit" name="load_data" value="Load Data" />
+       <input type="submit" name="submit" value="DAFTAR" />
+       <input type="submit" name="load_data" value="LIHAT YANG TELAH MENDAFTAR" />
  </form>
  <?php
     $host = "thiosqldatabase.database.windows.net";
@@ -60,7 +60,7 @@
             echo "Failed: " . $e;
         }
 
-        echo "<h3>Terima Kasih sudah mendaftar. Tunggu info selajutnya.</h3>";
+        echo "<h3>Terima Kasih sudah mendaftar. Tunggu info selajutnya atau lihat teman-teman kamu yang telah mendaftar</h3>";
     } else if (isset($_POST['load_data'])) {
         try {
             $sql_select = "SELECT * FROM Daftar";
