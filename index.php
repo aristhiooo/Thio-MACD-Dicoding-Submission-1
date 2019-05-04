@@ -153,16 +153,16 @@
     <h3>Formulir Calon Anggota UKM Seni UNM</h3>
     <h4><p>Silahkan isi formulir di bawah ini, kemudian klik <strong>Submit</strong> untuk daftar.</p></h4>
     <fieldset>
-      <input name="nama" placeholder="Nama Lengkap" type="text" tabindex="1" id="nama" required autofocus>
+      <input name="nama" placeholder="Nama Lengkap" type="text" tabindex="1" id="nama" autofocus>
     </fieldset>
     <fieldset>
-      <input name="nim" placeholder="NIM" type="text" tabindex="2" id="nim" required>
+      <input name="nim" placeholder="NIM" type="text" tabindex="2" id="nim">
     </fieldset>
     <fieldset>
-      <input name="prodi" placeholder="Program Studi" type="text" tabindex="3" id="prodi" required>
+      <input name="prodi" placeholder="Program Studi" type="text" tabindex="3" id="prodi">
     </fieldset>
     <fieldset>
-      <input name="hp" placeholder="Nomor Handphone" type="text" tabindex="4" required>
+      <input name="hp" placeholder="Nomor Handphone" type="text" tabindex="4">
     </fieldset>
     <fieldset>
       <input type="submit" name="submit" value="DAFTAR" />
