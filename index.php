@@ -27,10 +27,10 @@
        <input type="submit" name="load_data" value="Load Data" />
  </form>
  <?php
-    $host = "<thiosqldatabase.database.windows.net>";
-    $user = "<aristhiooo>";
-    $pass = "<PAKUsadew0>";
-    $db = "<thio-webapps>";
+    $host = "thiosqldatabase.database.windows.net";
+    $user = "aristhiooo";
+    $pass = "PAKUsadew0";
+    $db = "thio-webapps";
 
     try {
         $conn = new PDO("sqlsrv:server = $host; Database = $db", $user, $pass);
