@@ -47,7 +47,7 @@
 			$hp = $_POST['hp'];
             $date = date("Y-m-d");
             // Insert data
-            $sql_insert = "INSERT INTO Daftar (name, nim, prodi, hp, date) 
+            $sql_insert = "INSERT INTO Daftar (nama, nim, prodi, hp, date) 
                         VALUES (?,?,?,?)";
             $stmt = $conn->prepare($sql_insert);
             $stmt->bindValue(1, $nama);
